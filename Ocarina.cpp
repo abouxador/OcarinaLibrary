@@ -11,7 +11,7 @@
 OcarinaClass Ocarina;
 
 // OpenPipe Ocarina fingers map
-const char OcarinaClass::ocarina_pins[]={11,9,5,2,10,8,4,3};
+const char OcarinaClass::ocarina_pins[]={12,8,7,2,6,5,4,3};
 
 
 OcarinaClass::OcarinaClass(){
@@ -73,7 +73,9 @@ uint8_t OcarinaClass::readCapacitivePin(int pinToMeasure) {
   *port &= ~(bitmask);
   *ddr  |= bitmask;
 
-  delay(1);
+ 
+  //delay(1); // Avoid delay for Mozzi compatibility
+  for(int i=0; i<100; i++);
 
   // Make the pin an input with the internal pull-up on
   *ddr &= ~(bitmask);

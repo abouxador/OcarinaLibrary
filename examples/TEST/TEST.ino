@@ -4,7 +4,7 @@
  *
  *  Connect the OpenPipe Ocarina directly to an Arduino UNO compatible board.
  *
- *  OpenPipe Labs. 2013
+ *  OpenPipe Labs. 2015
  *  www.openpipe.cc
  *
  *  This example code is in the public domain.
